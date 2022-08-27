@@ -14,6 +14,7 @@ Banyak data yang tidak lengkap atau tidak terisi sehingga dianggap sebagai null 
 
 # Modelling
 
+
 Total dataset yang digunakan untuk modeling adalah 223.008 dengan 32 fitur. Fitur yang dipilih berdasarkan profile dan historical repayment capability applicant. Dataset akan dibagi sebagai 80% train dan 20% test. Model akan diuji juga dengan test dataset tanpa label untuk analisis kedepannya.
 Pada pengujian kali ini menggunakan beberapa algoritma. Hasil dari pengujian tersebut logistic regression dipilih karena memiliki nilai AUC test dan precission yang paling tinggi. AUC test dapat memaksimalkan performa yang baik dalam credit scoring karena menunjukan sensitifitas model. Lalu, precision dipilih untuk mengurangi false-negative pada hasil pengujian. Dilakukan GridSearchCV untuk mengoptimasi parameter yang digunakan dan menguji model pada cross validation berbeda-beda untuk meningkatkan kemampuan robust model pada Logistic Regression. 
 Fitur yang paling berpengaruh adalah PAY INSTALLMENT (jumlah pembayaran yang pernah ditunggak applicant), CREDIT_ACTIVE (jumlah kredit aktif yang dimiliki applicant ketika mengajukan kredit) dan HIGH_APPROVED_CREDIT (jumlah kredit terbesar yang pernah diterima oleh applicant). Tim Data Scientist memberikan rekomendasi pada Tim Credit Analyst untuk waspada dengan appkicant yang sering menunggak pembayaran kredit dan memiliki jumlah kredit aktif yang banyak karena memiliki kemungkinan default yang tinggi.
